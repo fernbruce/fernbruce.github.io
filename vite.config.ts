@@ -166,9 +166,10 @@ export default defineConfig((): Promise<UserConfig> => {
           // drop: ['console', 'debugger']
         },
         server: {
-          port: 3000,
+          port: 80,
           open: true,
           host: '0.0.0.0',
+          allowedHosts: ['*.edgeone.site'], // Allows all subdomains
           fs: {
             strict: false
           }
